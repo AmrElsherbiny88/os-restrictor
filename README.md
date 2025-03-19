@@ -8,7 +8,7 @@ OS Restrictor is a versatile utility that allows you to control function executi
 - Dynamically applies CSS classes based on the OS
 - Controls visibility of React and Svelte components
 - Supports class-based restriction in React and Svelte
-- Works seamlessly in JavaScript, React, Svelte, and pure HTML environments
+- Works seamlessly in JavaScript, React and Svelte 
 
 ## Installation
 
@@ -17,11 +17,26 @@ Install the package using npm:
 npm install os-restrictor
 ```
 
+## OS options 
+```sh
+Android
+Linux 
+Windows
+macOS
+Ios
+```
+
+
 ## Usage
 
 ### 1. Import OS Restrictor in Your Project
 ```js
 import osRestrictor from "os-restrictor";
+```
+
+## 2. detect current os 
+```sh
+console.log("Detected OS:", osRestrictor.currentOS);
 ```
 
 ### 2. Restrict Function Execution Based on OS
@@ -110,24 +125,29 @@ export default OSFunctionButton;
   }
 </script>
 
-<button on:click={restrictedFunction}>Run Function</button>
+<button onclick={restrictedFunction}>Run Function</button>
 ```
 
 ### 9. Class-Based Restriction in React
 ```jsx
-import React from "react";
 import osRestrictor from "os-restrictor";
 
-class OSRestrictedComponent extends React.Component {
-  render() {
-    if (!osRestrictor.isAllowed(["Windows", "macOS"])) {
-      return null; // Component won't render on other OS
-    }
-    return <div className="p-4 bg-blue-500 text-white">Hello, Windows & macOS User!</div>;
-  }
-}
+const Test = () => {
+  console.log("Detected OS:", osRestrictor.currentOS);
 
-export default OSRestrictedComponent;
+  if (!osRestrictor.isAllowed(["Linux"])) {
+    return null; // Hide component if the OS is NOT linux
+  }
+
+  return (
+    <div className="p-4 bg-blue-500 text-white">
+      Hello, LinuxUser! Detected OS: {osRestrictor.currentOS}
+    </div>
+  );
+};
+
+export default Test;
+
 ```
 
 ### 10. Class-Based Restriction in Svelte
