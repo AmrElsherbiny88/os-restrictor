@@ -1,0 +1,21 @@
+{
+  "name": "os-restrictor",
+  "version": "1.0.0",
+  "description": "A utility to restrict execution and styling based on OS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmrElsherbiny88/os-restrictor.git"
+  },
+  "keywords": ["os", "restriction", "cross-platform", "react", "svelte"],
+
+  "author": "Amr Elsherbiny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmrElsherbiny88/os-restrictor/issues"
+  },
+  "homepage": "https://github.com/AmrElsherbiny88/os-restrictor#readme"
+}
