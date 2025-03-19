@@ -1,6 +1,6 @@
 {
   "name": "os-restrictor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A utility to restrict execution and styling based on OS",
   "main": "index.js",
   "scripts": {
