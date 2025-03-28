@@ -49,6 +49,8 @@ class OSRestrictor {
     }
   }
 
+  
+
   isAllowed(allowedOS) {
     if (!Array.isArray(allowedOS)) allowedOS = [allowedOS];
 
@@ -58,5 +60,8 @@ class OSRestrictor {
     return allowedOS.includes(currentOS);
   }
 }
+
+
+
 
 export default new OSRestrictor();
